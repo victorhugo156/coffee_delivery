@@ -18,11 +18,12 @@ export function Header(){
 
                 <NavLink to="">
                     <ShoppingCartDiv>
-                        <div>
-                            <p>3</p>
-                        </div>
+                        
                         <ShoppingCart size={22}/>
                     </ShoppingCartDiv>
+                    <span>
+                        <p>3</p>
+                    </span>
                 </NavLink>
             </nav>
         </HeaderContainer>

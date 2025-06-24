@@ -1,3 +1,4 @@
+
 import styled from "styled-components";
 
 
@@ -7,6 +8,12 @@ width: 100%;
 display: flex;
 justify-content: space-between;
 align-items: center;
+
+
+img{
+    width: 5.28rem;
+    height: 2.5rem;
+}
 
 nav{
     width: 12rem;
@@ -32,6 +39,25 @@ a div{
     gap: .5rem;
 }
 
+nav a:last-child{
+    span{
+    background: ${props=>props.theme.colors["yellow-dark"]};
+    width: 20px;
+    height: 20px;
+
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    top:-40px;
+    left: 20px;
+
+    border-radius: 50%;
+};
+    
+}
 
 `
 
@@ -41,6 +67,7 @@ div{
     background: ${props=>props.theme.colors["yellow"]};
     width: 1.25rem;
     height: 1.25rem;
+    position: absolute;
 
     display: flex;
     align-items: center;
