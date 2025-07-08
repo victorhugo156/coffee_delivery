@@ -19,13 +19,13 @@ export const IconsList = styled.div`
     display: flex;
     gap: 1.5rem;
 
-
 `
 
 export const IconItem = styled.div<IconsPropsContainer>`
 
 display: flex;
 align-items: center;
+gap: .5rem;
 
 span{
 
@@ -41,7 +41,7 @@ span{
 
 p{
     font-size: ${props => props.theme.fontSizes["text-m"]};
-    color: ${props=> props.theme.colors["white"]}
+    color: ${props=> props.theme.colors["base-text"]}
 }
 
 
