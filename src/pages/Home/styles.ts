@@ -66,6 +66,15 @@ img{
     max-width: 29rem;
 };
 
+`
+
+export const Main = styled.div`
+width: 100%;
+
+>h2{
+    margin-bottom: 4rem;
+}
+
 
 `
 

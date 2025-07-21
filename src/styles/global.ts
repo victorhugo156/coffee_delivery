@@ -24,5 +24,11 @@ body, input, textarea, button{
     font-weight: ${props=> props.theme.fontWeights["regular"]};
     font-size: ${props=> props.theme.fontSizes["text-s"]};
 }
+button{
+    border: none;
+    padding: 0;
+    margin: 0;
+    text-decoration: 0;
+}
 
 `
