@@ -1,14 +1,31 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
+background-color: green;
+width: 100%;
+height: 100vh;
+
+margin: 0 auto;
+
+display: flex;
+flex-direction: column;
+justify-content: center;
 
 `
 
-export const ContainerForm = styled.div`
 
-`
+export const FormWrapper = styled.div`
+background-color: aliceblue;
 
-export const DeliveryAddressTitle = styled.div`
+display: flex;
+
+;
+
+form{
+    width: 50%;
+    display: flex;
+    justify-content: space-between
+}
 
 `
 

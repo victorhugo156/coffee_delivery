@@ -1,29 +1,21 @@
 import { Button } from "./components/Button";
-import { CreditCard, MapPin, CurrencyDollarSimple } from "phosphor-react";
-import { Container, ContainerForm, ContainerPaymentMethod, DeliveryAddressTitle, PaymentTitle } from "./styles";
+import { CreditCard, CurrencyDollarSimple } from "phosphor-react";
+import { Container, ContainerPaymentMethod, FormWrapper, PaymentTitle } from "./styles";
+import { AddressSection } from "./components/AddreessSection";
+import { useForm } from "react-hook-form";
+import { OrederSection } from "./components/OrederSection";
 
 export function Checkout() {
+
+
     return (
         <Container>
-            <ContainerForm>
-                <h3>Fill up the form</h3>
+            <FormWrapper>
                 <form action="">
-                    <DeliveryAddressTitle>
-                        <p>Delivery Address</p>
-                        <MapPin />
-                    </DeliveryAddressTitle>
-
-                    <input type="text" />
-                    <input type="text" />
-                    <div>
-                        <input type="text" />
-                        <input type="text" />
-                        <input type="text" />
-                        <input type="text" />
-                        <input type="text" />
-                    </div>
+                    <AddressSection />
+                    <OrederSection />
                 </form>
-            </ContainerForm>
+            </FormWrapper>
             <ContainerPaymentMethod>
                 <PaymentTitle>
                     <CurrencyDollarSimple />
