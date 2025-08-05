@@ -1,6 +1,7 @@
-import { ContainerForm, DeliveryAddressTitle, WrapperInputFirstRow, WrapperInputSecondRow } from "./styles";
-import { MapPin } from "phosphor-react";
+import { Bank, CreditCard, CurrencyDollarSimple, MapPin, Money } from "phosphor-react";
 import { useForm } from "react-hook-form";
+import { Button } from "../Button";
+import { ContainerButtons, ContainerForm, ContainerPaymentMethod, DeliveryAddressTitle, PaymentTitle, WrapperInputFirstRow, WrapperInputSecondRow } from "./styles";
 
 
 export function AddressSection() {
@@ -12,7 +13,7 @@ export function AddressSection() {
             <h3>Fill up the form</h3>
             <form action="">
                 <DeliveryAddressTitle>
-                    <MapPin />
+                    <MapPin size={24} />
                     <p>Delivery Address</p>
                 </DeliveryAddressTitle>
                 <WrapperInputFirstRow>
@@ -36,6 +37,21 @@ export function AddressSection() {
                     <input type="text" placeholder="Estate" {...register("estate")} />
                 </WrapperInputSecondRow>
             </form>
+
+            <ContainerPaymentMethod>
+                <PaymentTitle>
+                    <CurrencyDollarSimple size={24} />
+                    <div>
+                        <p>Payment</p>
+                        <p>Payment is done to the delivey currier. Pick the payment method</p>
+                    </div>
+                </PaymentTitle>
+                <ContainerButtons>
+                    <Button icon={<CreditCard />} text={"Credit Card"} />
+                    <Button icon={<Bank />} text={"Savings Card"} />
+                    <Button icon={<Money />} text={"Cash"} />
+                </ContainerButtons>
+            </ContainerPaymentMethod>
         </ContainerForm>
     )
 }

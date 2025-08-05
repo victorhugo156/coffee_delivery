@@ -1,38 +1,63 @@
 import styled from "styled-components";
 
 export const ContainerForm = styled.div`
-width: 100%;
-background-color: yellow;
 
 display: flex;
 flex-direction: column;
 
+h3{
+  margin-bottom: 2rem;
+
+  font-size: ${props=>props.theme.fontSizes["title-s"]};
+}
+
 form{
     width: 100%;
     background-color:${props=>props.theme.colors["base-card"]};
+
     display: flex;
     flex-direction: column;
 
-    padding: 2rem;
-
     border-radius: 8px;
+
+    padding: 3rem 2.5rem 3rem 2.5rem;
+}
+
+input{
+  background-color: ${props=>props.theme.colors["base-input"]};
+  height: 2.62rem;
+
+  padding: 1rem;
+
+  border: none;
+  border-radius: 8px;
 }
 
 `
 export const DeliveryAddressTitle = styled.div`
 display: flex;
-
+align-items: center;
+gap: .5rem;
 
 margin-bottom:3rem;
+
+p{
+  font-size: ${props=>props.theme.fontSizes["text-m"]};
+}
 
 `
 
 
 export const WrapperInputFirstRow = styled.div`
 display: flex;
-gap: 2rem;
+flex-direction: column;
+gap: 1rem;
 
 margin-bottom: 1rem;
+
+>input:nth-child(1){
+  width: 12rem;
+}
 
 `
 export const WrapperInputSecondRow = styled.div `
@@ -71,5 +96,49 @@ display: grid;
   }
 ;
 
+
+`
+
+
+export const ContainerPaymentMethod = styled.div`
+
+background-color:${props=>props.theme.colors["base-card"]};
+
+padding: 3rem 2.5rem 3rem 2.5rem;
+
+border-radius: 8px;
+
+margin-top: 1rem;
+
+
+
+`
+
+export const PaymentTitle = styled.div`
+
+display: flex;
+align-items: flex-start;
+gap: .5rem;
+
+margin-bottom: 2rem;
+
+div{
+  display: flex;
+  flex-direction: column;
+  gap:.2rem;
+
+}
+
+p{
+  font-size: ${props=>props.theme.fontSizes["text-m"]};
+}
+
+`
+
+export const ContainerButtons = styled.div`
+
+max-width: 35rem;
+display: flex;
+gap: 1rem;
 
 `
