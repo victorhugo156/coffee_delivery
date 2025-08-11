@@ -47,9 +47,9 @@ export function AddressSection() {
                     </div>
                 </PaymentTitle>
                 <ContainerButtons>
-                    <Button icon={<CreditCard />} text={"Credit Card"} />
-                    <Button icon={<Bank />} text={"Savings Card"} />
-                    <Button icon={<Money />} text={"Cash"} />
+                    <Button icon={<CreditCard size={18} color="purple" />} text={"Credit Card"} color={"dark"} variant={"baseButton"} />
+                    <Button icon={<Bank size={18} color="purple" />} text={"Savings Card"} color={"dark"} variant={"baseButton"} />
+                    <Button icon={<Money size={18} color="purple" />} text={"Cash"} color={"dark"} variant={"baseButton"} />
                 </ContainerButtons>
             </ContainerPaymentMethod>
         </ContainerForm>

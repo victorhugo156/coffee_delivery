@@ -16,7 +16,7 @@ h3{
 `
 
 export const ContainerOrder = styled.div`
-background-color: red;
+background-color: ${props=>props.theme.colors["base-card"]};
 
 display: flex;
 flex-direction: column;
@@ -37,17 +37,31 @@ img{
 
 `
 
-export const Controls = styled.div`
+export const ContainerControls = styled.div`
+
+display: flex;
+flex-direction: column;
+gap: .5rem;
+
+margin-left: 1rem;
+margin-right: 2rem;
+
+
+`
+
+export const ControlsWrapper = styled.div`
 
 display: flex;
 gap: .4rem;
 
+`
 
->div:first-child{
+export const Controls = styled.div`
+
     background-color: ${props=>props.theme.colors["base-button"]};
 
     width: 4.5rem;
-    height: 2.37rem;
+    height: 2.8rem;
 
     display: flex;
     align-items: center;
@@ -68,6 +82,23 @@ gap: .4rem;
         font-size: ${props=>props.theme.fontSizes["title-m"]};
         color: ${props=>props.theme.colors["purple-dark"]};
     }
+
+
+`
+
+export const ContainerPrice = styled.div`
+
+display: flex;
+gap: .5rem;
+
+span{
+    font-size: ${props=>props.theme.fontSizes["text-m"]};
+    font-weight: ${props=>props.theme.fontWeights["bold"]};
+}
+
+p{
+    font-size: ${props=>props.theme.fontSizes["text-m"]};
+    font-weight: ${props=>props.theme.fontWeights["bold"]};
 }
 
 
@@ -75,8 +106,31 @@ gap: .4rem;
 
 export const Divider = styled.span`
 
-border: 1px solid yellow;
+border: 1px solid ${props=>props.theme.colors["base-button"]};
 
+margin: 2rem 0;
 
+`
+
+export const ContainerOrderSummary = styled.div`
+width: 100%;
+display: flex;
+flex-direction: column;
+gap: 1rem;
+
+margin-bottom: 2rem;
+`
+
+export const WrapperOerderInfo = styled.div`
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    padding:  0 1.5;
+
+    div{
+        display: flex;
+        align-items: flex-end;
+    }
 
 `

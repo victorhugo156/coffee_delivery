@@ -1,16 +1,18 @@
-import { ContainerButton, IconBtn, type ColorVariant } from "./styles";
+import { ContainerButton, IconBtn, type Alignment, type ColorVariant, type TextColorVariant  } from "./styles";
 
 interface ButtonProps {
     variant?: ColorVariant;
     icon?: React.ReactNode;
-    text: string
+    text: string;
+    align?: Alignment;
+    color?: TextColorVariant;
 }
 
-export function Button({icon, text, variant = "gray"}: ButtonProps){
+export function Button({icon, text, variant = "gray", align = "center", color = "dark"}: ButtonProps){
     return(
-        <ContainerButton variant={variant}>
+        <ContainerButton variant={variant} $align={align} textColor={color}>
             <IconBtn>{icon}</IconBtn>
-            <p>{text}</p>
+            <p color={color}>{text}</p>
         </ContainerButton>
     )
 }
