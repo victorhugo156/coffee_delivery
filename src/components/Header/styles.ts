@@ -6,32 +6,50 @@ export const HeaderContainer = styled.header`
 
 width: 100%;
 display: flex;
-justify-content: space-between;
 align-items: center;
 
 
-img{
-    width: 5.28rem;
-    height: 2.5rem;
-}
-
 nav{
-    width: 12rem;
+
+    width: 100%;
     display: flex;
     gap: 1.5rem;
 };
 
-a{
+nav a:first-child {
+
+width: 6.31rem;
+height: 3.5rem;
+
+display: flex;
+flex-shrink: 0;
+margin-right: auto;
+
+align-items: center;
+
+padding: .7rem;
+
+}
+
+img{
+width: 100%;
+
+object-fit: cover;
+
+}
+
+
+a:nth-child(2), a:nth-child(3){
     background: ${props => props.theme.colors["yellow-light"]};
     height: 2.37rem;
     padding: .5rem;
+
     border-radius: 6px;
+    
 
 }
 
-nav a:first-child{
-    background: ${props => props.theme.colors["purple-light"]};
-}
+
 
 a div{
     display: flex;

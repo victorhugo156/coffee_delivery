@@ -42,6 +42,11 @@ padding: .8rem 1rem;
 
 border-radius: 3px;
 
+&:disabled{
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
 p{
     color: ${({ textColor }) => textColorVariant[textColor]};
 }

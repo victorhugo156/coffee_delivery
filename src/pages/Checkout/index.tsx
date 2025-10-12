@@ -1,6 +1,6 @@
 import { Container, FormWrapper, } from "./styles";
 import { AddressSection } from "./components/AddreessSection";
-import { OrederSection } from "./components/OrederSection";
+import { OrderSection } from "./components/OrderSection";
 
 export function Checkout() {
 
@@ -8,7 +8,7 @@ export function Checkout() {
         <Container>
             <FormWrapper>
                     <AddressSection />
-                    <OrederSection />
+                    <OrderSection />
             </FormWrapper>
         </Container>
 
