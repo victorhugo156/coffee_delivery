@@ -42,6 +42,8 @@ padding: .8rem 1rem;
 
 border-radius: 3px;
 
+cursor: pointer;
+
 &:disabled{
     opacity: 0.5;
     cursor: not-allowed;

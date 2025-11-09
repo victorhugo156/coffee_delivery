@@ -21,14 +21,15 @@ export type CartItem = Coffees & { quantity: number; priceNumber: number };
 export type CartAction =
     | { type: "ADD_PRODUCT", payload: { coffee: Coffees; quantity: number } }
     | { type: "INCREMENT", payload: { id: number } }
-    | { type: "DECREMENT", payload: { id: number } };
+    | { type: "DECREMENT", payload: { id: number } }
+    | { type: "REMOVE_PRODUCT", payload: { id: number } }
 
 //creating an enum to be easy to work with this reducer in other files
 export enum ActionTypes{
     ADD_PRODUCT = "ADD_PRODUCT",
     INCREMENT = "INCREMENT",
-    DECREMENT = "DECREMENT"
-
+    DECREMENT = "DECREMENT",
+    REMOVE_PRODUCT = "REMOVE_PRODUCT",
 }
 
 
@@ -58,12 +59,18 @@ export function cartReducer(state: CartItem[], action: CartAction): CartItem[] {
             return [...state, {...coffee, priceNumber, quantity}]
         };
 
+        case ActionTypes.REMOVE_PRODUCT:{
+            //Filter the state, keeping items where the item's id is NOT equal to the payload id.
+            return state.filter((item)=> item.id !== action.payload.id)
+            
+        }
+
         case ActionTypes.INCREMENT:{
-            return state.map((item)=> item.id === action.payload.id ? {...item, quantity: item.quantity + 1} : item)
+            return state.map((item)=> item.id === action.payload.id ? {...item, quantity: item.quantity + 1, totalPrice: (item.quantity * item.priceNumber).toFixed(2)} : item)
         };
 
         case ActionTypes.DECREMENT:{
-            return state.map((item)=> item.id === action.payload.id ? {...item, quantity: item.quantity - 1} : item)
+            return state.map((item)=> item.id === action.payload.id ? {...item, quantity: item.quantity - 1, totalPrice: (item.quantity * item.priceNumber).toFixed(2)} : item)
         }
 
         default:

@@ -9,9 +9,9 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
     disabled?: boolean;
 }
 
-export function Button({icon, text, variant = "gray", align = "center", color = "dark", disabled = false}: ButtonProps){
+export function Button({icon, text, variant = "gray", align = "center", color = "dark", disabled = false, ...rest}: ButtonProps){
     return(
-        <ContainerButton variant={variant} $align={align} textColor={color} disabled={disabled}>
+        <ContainerButton variant={variant} $align={align} textColor={color} disabled={disabled} {...rest}>
             <IconBtn>{icon}</IconBtn>
             <p color={color}>{text}</p>
         </ContainerButton>
