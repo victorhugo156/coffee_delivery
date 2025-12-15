@@ -55,9 +55,16 @@ gap: 1rem;
 
 margin-bottom: 1rem;
 
->input:nth-child(1){
+>input:nth-child(2){
   width: 12rem;
 }
+
+`
+
+export const SuggestionList = styled.div`
+display: flex;
+flex-direction: column;
+gap: 1rem;
 
 `
 export const WrapperInputSecondRow = styled.div `

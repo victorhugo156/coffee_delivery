@@ -53,6 +53,11 @@ p{
     color: ${({ textColor }) => textColorVariant[textColor]};
 }
 
+&:hover{
+    border: 1px solid ${({ theme }) => theme.colors["purple"]};
+    background-color: ${({ theme }) => theme.colors["purple-light"]};
+}
+
 `
 
 export const IconBtn = styled.i`

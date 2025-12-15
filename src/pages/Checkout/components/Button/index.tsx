@@ -9,9 +9,17 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
     disabled?: boolean;
 }
 
+
+function handleClick(event: React.MouseEvent<HTMLButtonElement>){
+    
+    console.log(event);
+
+
+}
+
 export function Button({icon, text, variant = "gray", align = "center", color = "dark", disabled = false, ...rest}: ButtonProps){
     return(
-        <ContainerButton variant={variant} $align={align} textColor={color} disabled={disabled} {...rest}>
+        <ContainerButton  onClick={handleClick} variant={variant} $align={align} textColor={color} disabled={disabled} {...rest}>
             <IconBtn>{icon}</IconBtn>
             <p color={color}>{text}</p>
         </ContainerButton>
